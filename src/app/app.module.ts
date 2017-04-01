@@ -1,3 +1,4 @@
+/* tslint:disable */
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -20,14 +21,14 @@ import { ROUTES } from './app.routes';
 import { ApplicationComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
-import { Ng2MapModule } from 'ng2-map';
+import { NguiMapModule } from '@ngui/map';
 import {
     CarouselModule,
     PaginationModule,
     TabsModule,
     TypeaheadModule, TooltipModule
 } from 'ng2-bootstrap';
-import { GoogleMapsServiceProvider } from './common/google.maps.service';
+
 // Application wide providers
 const APP_PROVIDERS = [
     ...APP_RESOLVER_PROVIDERS,
@@ -55,7 +56,7 @@ type StoreType = {
         PaginationModule.forRoot(),
         CarouselModule.forRoot(),
         TooltipModule.forRoot(),
-        Ng2MapModule.forRoot(
+        NguiMapModule.forRoot(
             {
                 apiUrl: 'https://maps.google.com/maps/api/js?key=' +
                         'AIzaSyCbMGRUwcqKjlYX4h4-P6t-xcDryRYLmCM'
@@ -108,3 +109,4 @@ export class AppModule {
         delete store.disposeOldHosts;
     }
 }
+/* tslint:enable */

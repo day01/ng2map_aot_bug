@@ -11,7 +11,7 @@ import {
     TooltipConfig
 } from 'ng2-bootstrap';
 import { SelectModule } from 'ng2-select';
-import { Ng2MapModule } from 'ng2-map';
+import { NguiMapModule } from '@ngui/map';
 import { CommonModule } from '@angular/common';
 @NgModule({
     exports: [
@@ -23,7 +23,7 @@ import { CommonModule } from '@angular/common';
         PaginationModule,
         CarouselModule,
         SelectModule,
-        Ng2MapModule,
+        NguiMapModule,
         ModalModule,
     ],
     providers: [GoogleMapsServiceProvider, TooltipConfig],
